@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@theme {
+    /* The Emeralds */
+    --color-brand-emerald: #047857;
+    --color-brand-emerald-dark: #064E3B;
+
+    /* The Silvers */
+    --color-brand-silver: #94A3B8;
+    --color-brand-silver-light: #E2E8F0;
+
+    /* The Blacks & Whites */
+    --color-brand-black: #0F172A;
+    --color-brand-bg: #F8FAFC;
+}
+
+/* Any of your custom CSS like the hide-scrollbar class goes below here */
+@layer utilities {
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
