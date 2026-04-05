@@ -172,7 +172,7 @@ export default function Navbar() {
             }`}
         >
           <span className="relative z-10 text-[13px] font-sans font-bold tracking-wide leading-none whitespace-nowrap">
-            Start with ₹10
+            Book a Demo
           </span>
           {/* Shine effect animation */}
           <div className={`absolute inset-0 bg-gradient-to-r from-transparent to-transparent -translate-x-full group-hover:animate-shimmer ${isScrolled ? "via-white/[0.15]" : "via-black/[0.08]"

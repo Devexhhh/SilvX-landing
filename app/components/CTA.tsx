@@ -44,7 +44,7 @@ export default function CTA() {
 
         {/* Emerald CTA Button - Full width on very small screens, auto on larger */}
         <button className="w-full sm:w-auto bg-brand-emerald text-white px-9 py-4 rounded-[3px] text-[13px] font-sans font-bold tracking-wide hover:bg-brand-emerald-dark transition-all hover:shadow-[0_20px_40px_rgba(4,120,87,0.3)] hover:-translate-y-1 active:translate-y-0 active:scale-95 cursor-pointer">
-          Set Up Auto-Pay
+          Book a Demo
         </button>
 
         {/* Subtle helper text for mobile conversion */}
