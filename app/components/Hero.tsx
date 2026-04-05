@@ -290,7 +290,7 @@ export default function Hero() {
           ref={badgeRef}
           className="group inline-flex items-center gap-2 border border-white/10 rounded-full px-2.5 py-1 mb-5 backdrop-blur-md bg-white/[0.03] hover:bg-white/[0.08] transition-all cursor-pointer"
         >
-          <span className="text-[10px] font-sans tracking-[0.15em] uppercase text-white/50">
+          <span className="text-[8px] md:text-[10px] font-sans tracking-[0.15em] uppercase text-white/50">
             SilvX · The Invisible Habit
           </span>
           <span className="text-white/30 group-hover:translate-x-0.5 transition-transform">›</span>
@@ -298,7 +298,7 @@ export default function Hero() {
 
         <h1
           ref={headlineRef}
-          className="text-5xl md:text-6xl text-white leading-[1.05] mb-5 tracking-tight font-light"
+          className="text-4xl md:text-6xl text-white leading-[1.05] mb-5 tracking-tight font-light"
           style={{ fontFamily: "var(--font-serif)" }}
         >
           Own the God's Metal,
@@ -308,7 +308,7 @@ export default function Hero() {
 
         <p
           ref={subtextRef}
-          className="text-white/45 text-base md:text-sm font-sans font-light leading-relaxed max-w-xl mb-5"
+          className="text-white/45 text-base px-4 text-[13px] md:text-sm font-sans font-light leading-relaxed max-w-xl mb-5"
         >
           Automate your daily accumulation with just{" "}
           <span className="text-white/80 font-medium">₹10</span>. Build a secure
@@ -320,7 +320,7 @@ export default function Hero() {
           className="group relative bg-[#047857] text-white rounded overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_25px_rgba(4,120,87,0.4)] flex items-center justify-center min-w-[180px] px-10 py-4 cursor-pointer"
         >
           <span className="relative z-10 text-[14px] font-sans font-medium tracking-tight leading-none whitespace-nowrap">
-            Start Accumulating
+            Book a Demo
           </span>
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.15] to-transparent -translate-x-full group-hover:animate-shimmer" />
         </button>
