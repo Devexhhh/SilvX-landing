@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#161616] flex flex-col items-center pt-24 pb-12">
+    <footer className="w-full bg-brand-black flex flex-col items-center pt-24 pb-12 border-t border-brand-silver/5">
       <div className="w-full max-w-6xl mx-auto px-6">
 
         {/* Top Section: Split Left (Brand) and Right (Links) */}
@@ -13,37 +13,34 @@ export default function Footer() {
           {/* --- LEFT: Brand & Copyright --- */}
           <div className="flex flex-col max-w-[240px]">
             <div className="flex items-center gap-2.5 mb-6">
-              {/* Custom CSS Ankar "Plus" Logo matching the Navbar */}
-              <div className="relative w-4 h-4">
-                <div className="absolute top-1/2 left-0 w-full h-[2px] bg-white -translate-y-1/2" />
-                <div className="absolute left-1/2 top-0 w-[2px] h-full bg-white -translate-x-1/2" />
-                {/* The cutout box matches the footer background to create the shape */}
-                <div className="absolute top-0 left-0 w-1.5 h-1.5 bg-[#161616] -translate-x-[2px] -translate-y-[2px]" />
+              {/* Custom CSS SilvX Logo (Silver Bar & Emerald Accent) */}
+              <div className="relative w-5 h-5 flex items-center justify-center">
+                <div className="absolute w-full h-[3px] bg-brand-silver rounded-sm transform rotate-45" />
+                <div className="absolute w-full h-[3px] bg-brand-emerald rounded-sm transform -rotate-45 mix-blend-screen" />
               </div>
               <span className="text-white font-bold text-[18px] tracking-[0.2em] leading-none">
-                ANKAR
+                SILVX
               </span>
             </div>
 
-            {/* Forced narrow width to match the specific text wrap in the image */}
-            <p className="text-white/40 text-[13px] font-sans font-light leading-relaxed pr-4">
-              © 2026 Ankar AI - AI Operating System for Patents
+            <p className="text-brand-silver/40 text-[13px] font-sans font-light leading-relaxed pr-4">
+              © 2026 SilvX Technologies. <br />
+              The God's Metal, accessible to everyone.
             </p>
           </div>
 
           {/* --- RIGHT: Link Columns --- */}
-          {/* A generous gap-20 to space the columns out luxuriously */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-20 lg:gap-28">
 
             {/* Product */}
             <div>
-              <h4 className="text-[11px] font-sans font-semibold tracking-[0.15em] text-white/40 uppercase mb-6">
-                Product
+              <h4 className="text-[11px] font-sans font-semibold tracking-[0.15em] text-brand-emerald uppercase mb-6">
+                Ecosystem
               </h4>
               <ul className="space-y-4">
-                {["Patent Drafting", "Office Actions", "Infringement Detection"].map((item) => (
+                {["Daily Auto-Pay", "Silver-Backed Loans", "The Craftshop", "Physical Delivery"].map((item) => (
                   <li key={item}>
-                    <button className="text-[14px] font-sans font-medium text-white/80 hover:text-white transition-colors">
+                    <button className="text-[14px] font-sans font-medium text-brand-silver/80 hover:text-brand-emerald transition-colors cursor-pointer">
                       {item}
                     </button>
                   </li>
@@ -53,13 +50,13 @@ export default function Footer() {
 
             {/* Company */}
             <div>
-              <h4 className="text-[11px] font-sans font-semibold tracking-[0.15em] text-white/40 uppercase mb-6">
+              <h4 className="text-[11px] font-sans font-semibold tracking-[0.15em] text-brand-emerald uppercase mb-6">
                 Company
               </h4>
               <ul className="space-y-4">
-                {["Security", "About us", "Careers"].map((item) => (
+                {["About us", "Vault & Security", "Partner Network", "Careers"].map((item) => (
                   <li key={item}>
-                    <button className="text-[14px] font-sans font-medium text-white/80 hover:text-white transition-colors">
+                    <button className="text-[14px] font-sans font-medium text-brand-silver/80 hover:text-brand-emerald transition-colors cursor-pointer">
                       {item}
                     </button>
                   </li>
@@ -69,13 +66,13 @@ export default function Footer() {
 
             {/* Resources */}
             <div>
-              <h4 className="text-[11px] font-sans font-semibold tracking-[0.15em] text-white/40 uppercase mb-6">
+              <h4 className="text-[11px] font-sans font-semibold tracking-[0.15em] text-brand-emerald uppercase mb-6">
                 Resources
               </h4>
               <ul className="space-y-4">
-                {["Case studies", "Newsroom", "Blog", "Community"].map((item) => (
+                {["Live Silver Prices", "Wealth Calculator", "Financial Blog", "Help & FAQs"].map((item) => (
                   <li key={item}>
-                    <button className="text-[14px] font-sans font-medium text-white/80 hover:text-white transition-colors">
+                    <button className="text-[14px] font-sans font-medium text-brand-silver/80 hover:text-brand-emerald transition-colors cursor-pointer">
                       {item}
                     </button>
                   </li>
@@ -87,14 +84,15 @@ export default function Footer() {
         </div>
 
         {/* --- BOTTOM: Legal Bar --- */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <button className="text-[14px] font-sans font-medium text-white hover:text-white/80 transition-colors">
-            Contact us
+        <div className="border-t border-brand-silver/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <button className="text-[14px] font-sans font-medium text-white hover:text-brand-emerald transition-colors cursor-pointer">
+            Contact Support
           </button>
 
           <div className="flex flex-wrap justify-center md:justify-end items-center gap-6 lg:gap-8">
-            {["Terms of Service", "Acceptable Use Policy", "Data Processing Addendum", "Trust Center"].map((item) => (
-              <button key={item} className="text-[13px] font-sans font-light text-white/40 hover:text-white/80 transition-colors">
+            {/* Updated Legal Links for Fintech Compliance */}
+            {["Terms of Service", "Privacy Policy", "KYC & AML Policy", "Grievance Redressal"].map((item) => (
+              <button key={item} className="text-[13px] font-sans font-light text-brand-silver/40 hover:text-brand-silver/80 transition-colors cursor-pointer">
                 {item}
               </button>
             ))}
