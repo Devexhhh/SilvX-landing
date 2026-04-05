@@ -5,11 +5,11 @@ import { FileText, MessageSquare, Sparkles, Gavel, FileSignature, MessageCircle,
 
 export default function FeaturedModules() {
   return (
-    <section className="relative w-full bg-[#f5f4f1] py-32 flex flex-col items-center">
+    <section className="relative w-full bg-[#f5f4f1] pt-20 flex flex-col items-center">
       <div className="relative z-10 w-full max-w-5xl mx-auto px-6">
 
         {/* Section Header */}
-        <div className="mb-24">
+        <div className="mb-12">
           <div className="flex items-center gap-2 text-[11px] font-sans font-bold tracking-[0.2em] uppercase text-black/40 mb-6">
             <div className="grid grid-cols-2 gap-[2px] w-3 h-3">
               <div className="bg-black/30 w-1 h-1" />
@@ -46,9 +46,10 @@ export default function FeaturedModules() {
             </div>
 
             {/* UI Graphic Mockup */}
-            <div className="order-1 lg:order-2 w-full aspect-[4/3] relative rounded-sm overflow-hidden flex items-center justify-center shadow-2xl shadow-black/5"
-              style={{ background: "radial-gradient(circle at 20% 50%, #d95c35 0%, #3a160a 50%, #111111 100%)" }}>
+            {/* Converted to Tailwind bg-[radial-gradient(...)] */}
+            <div className="order-1 lg:order-2 w-full aspect-[4/3] relative rounded-sm overflow-hidden flex items-center justify-center shadow-2xl shadow-black/5 bg-[radial-gradient(circle_at_20%_50%,#d95c35_0%,#3a160a_50%,#111111_100%)]">
               <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+
               {/* Glass Card 1: Draft */}
               <div className="absolute top-[15%] left-[15%] w-48 bg-white/70 backdrop-blur-md border border-white/60 p-4 rounded-xl shadow-xl">
                 <div className="flex items-center gap-2 mb-3">
@@ -89,9 +90,10 @@ export default function FeaturedModules() {
           {/* --- MODULE 2: OFFICE ACTIONS (Image Left, Text Right) --- */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* UI Graphic Mockup */}
-            <div className="order-1 lg:order-1 w-full aspect-[4/3] relative rounded-sm overflow-hidden flex justify-center shadow-2xl shadow-black/5 items-center"
-              style={{ background: "radial-gradient(circle at 30% 70%, #2563eb 0%, #1e3a8a 50%, #020617 100%)" }}>
+            {/* Converted to Tailwind bg-[radial-gradient(...)] */}
+            <div className="order-1 lg:order-1 w-full aspect-[4/3] relative rounded-sm overflow-hidden flex justify-center shadow-2xl shadow-black/5 items-center bg-[radial-gradient(circle_at_30%_70%,#2563eb_0%,#1e3a8a_50%,#020617_100%)]">
               <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+
               {/* Glass Card 1: Objections */}
               <div className="absolute top-[20%] left-[10%] w-64 bg-white/80 backdrop-blur-md border border-white/60 p-4 rounded-xl shadow-xl z-10">
                 <div className="flex items-center justify-between mb-4">
@@ -160,9 +162,10 @@ export default function FeaturedModules() {
             </div>
 
             {/* UI Graphic Mockup */}
-            <div className="order-1 lg:order-2 w-full aspect-[4/3] relative rounded-sm overflow-hidden flex justify-center shadow-2xl shadow-black/5 items-end"
-              style={{ background: "radial-gradient(circle at 50% 0%, #b91c1c 0%, #450a0a 50%, #0a0a0a 100%)" }}>
+            {/* Converted to Tailwind bg-[radial-gradient(...)] */}
+            <div className="order-1 lg:order-2 w-full aspect-[4/3] relative rounded-sm overflow-hidden flex justify-center shadow-2xl shadow-black/5 items-end bg-[radial-gradient(circle_at_50%_0%,#b91c1c_0%,#450a0a_50%,#0a0a0a_100%)]">
               <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+
               <div className="w-[85%] h-[85%] bg-[#faf9f7] rounded-t-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.3)] border border-white/20 p-6 relative z-10 flex flex-col">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="bg-[#222] p-1.5 rounded-lg"><Target size={16} className="text-white" /></div>
