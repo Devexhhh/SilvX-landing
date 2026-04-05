@@ -69,31 +69,31 @@ export default function Hero() {
       </div>
 
       {/* --- CONTENT LAYER --- */}
-      <div className="relative z-20 text-center px-6 w-full max-w-4xl mx-auto flex flex-col items-center gap-3">
+      <div className="relative z-20 text-center px-6 w-full max-w-4xl mx-auto flex flex-col items-center gap-2">
 
-        {/* Badge */}
-        <div className="group inline-flex items-center gap-2 border border-white/10 rounded-full px-4 py-1.5 mb-10 backdrop-blur-md bg-white/[0.03] hover:bg-white/[0.08] transition-all cursor-pointer" style={{ padding: '4px 10px' }} >
+        {/* Badge - Removed inline style padding, added px-2.5 py-1 */}
+        <div className="group inline-flex items-center gap-2 border border-white/10 rounded-full px-2.5 py-1 mb-5 backdrop-blur-md bg-white/[0.03] hover:bg-white/[0.08] transition-all cursor-pointer">
           <span className="text-[10px] font-sans tracking-[0.15em] uppercase text-white/50">
             SilvX · $20M Series A
           </span>
           <span className="text-white/30 group-hover:translate-x-0.5 transition-transform">›</span>
         </div>
+
         {/* Headline */}
-        <h1 className="text-5xl md:text-6xl text-white leading-[1.05] mb-8 tracking-tight font-light" style={{ fontFamily: 'var(--font-serif)' }}>
+        <h1 className="text-5xl md:text-6xl text-white leading-[1.05] mb-5 tracking-tight font-light" style={{ fontFamily: 'var(--font-serif)' }}>
           Stronger Patents,
           <span className="italic font-normal opacity-90"> at Scale</span>
         </h1>
 
         {/* Subtext */}
-        <p className="text-white/45 text-base md:text-sm font-sans font-light leading-relaxed max-w-xl mb-12">
+        <p className="text-white/45 text-base md:text-sm font-sans font-light leading-relaxed max-w-xl mb-5">
           Trusted by <span className="text-white/80">AmLaw100</span> and <span className="text-white/80">Fortune 500</span> firms for patent drafting, office actions, and infringement detection.
         </p>
 
         {/* --- THE BUTTON --- */}
-        {/* --- THE BUTTON --- */}
+        {/* Removed inline style padding, added px-10 py-4 */}
         <button
-          className="group relative bg-white text-black rounded overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)] flex items-center justify-center min-w-[180px] cursor-pointer"
-          style={{ padding: '16px 40px' }} // Using inline styles to override any stubborn CSS resets
+          className="group relative bg-white text-black rounded overflow-hidden transition-all hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)] flex items-center justify-center min-w-[180px] px-10 py-4 cursor-pointer"
         >
           <span className="relative z-10 text-[14px] font-sans font-medium tracking-tight leading-none whitespace-nowrap">
             Book a demo
