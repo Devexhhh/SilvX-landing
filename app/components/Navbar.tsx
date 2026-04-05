@@ -84,13 +84,25 @@ export default function Navbar() {
                 </button>
 
                 {/* --- MEGA MENU DROPDOWN --- */}
-                {hasDropdown && isActive && (
-                  <div className="mt-6 absolute top-full left-1/2 -translate-x-1/2 w-[720px] bg-white rounded-sm shadow-[0_30px_60px_rgba(0,0,0,0.15)] border border-slate-100 flex overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200 z-50 cursor-default">
-
+                {hasDropdown && (
+                  <div
+                    className={`
+      absolute top-full left-1/2 -translate-x-1/2 w-[720px] 
+      bg-white rounded-sm shadow-[0_30px_60px_rgba(0,0,0,0.15)] 
+      border border-slate-100 flex overflow-hidden z-50 cursor-default
+      transition-all duration-300 ease-out
+      ${isActive
+                        ? "opacity-100 translate-y-4 visible"
+                        : "opacity-0 translate-y-0 invisible pointer-events-none"}
+    `}
+                  >
                     {/* Left Column: Links */}
                     <div className="w-[45%] p-6 flex flex-col gap-2 bg-white">
                       {dropdownData[item as keyof typeof dropdownData].links.map((link, idx) => (
-                        <div key={idx} className="flex items-start gap-3 p-3 rounded-md hover:bg-slate-50 transition-colors cursor-pointer group">
+                        <div
+                          key={idx}
+                          className="flex items-start gap-3 p-3 rounded-md hover:bg-slate-50 transition-colors cursor-pointer group"
+                        >
                           <div className="mt-0.5 text-slate-400 group-hover:text-brand-emerald transition-colors">
                             <link.icon size={20} strokeWidth={1.5} />
                           </div>
@@ -122,26 +134,27 @@ export default function Navbar() {
 
                       {/* Profiles */}
                       <div className="flex items-center gap-6">
-                        {dropdownData[item as keyof typeof dropdownData].card.profiles.map((profile, idx) => (
-                          <div key={idx} className="flex items-center gap-3">
-                            <img
-                              src={profile.img}
-                              alt={profile.name}
-                              className="w-10 h-10 rounded-full border border-slate-200 object-cover grayscale hover:grayscale-0 transition-all duration-300"
-                            />
-                            <div className="flex flex-col">
-                              <span className="text-slate-900 text-[13px] font-semibold font-sans">
-                                {profile.name}
-                              </span>
-                              <span className="text-slate-500 text-[10px] font-sans tracking-wide uppercase">
-                                {profile.role}
-                              </span>
+                        {dropdownData[item as keyof typeof dropdownData].card.profiles.map(
+                          (profile, idx) => (
+                            <div key={idx} className="flex items-center gap-3">
+                              <img
+                                src={profile.img}
+                                alt={profile.name}
+                                className="w-10 h-10 rounded-full border border-slate-200 object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                              />
+                              <div className="flex flex-col">
+                                <span className="text-slate-900 text-[13px] font-semibold font-sans">
+                                  {profile.name}
+                                </span>
+                                <span className="text-slate-500 text-[10px] font-sans tracking-wide uppercase">
+                                  {profile.role}
+                                </span>
+                              </div>
                             </div>
-                          </div>
-                        ))}
+                          )
+                        )}
                       </div>
                     </div>
-
                   </div>
                 )}
               </li>
