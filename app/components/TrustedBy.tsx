@@ -29,12 +29,6 @@ export default function TrustedBy() {
           </div>
         </div>
       </div>
-
-      {/* Visual Guide Extension */}
-      <div className="absolute inset-0 left-1/2 -translate-x-1/2 w-full max-w-5xl pointer-events-none z-0 px-6">
-        <div className="absolute left-6 top-0 bottom-0 w-[1px] bg-black/[0.03]" />
-        <div className="absolute right-6 top-0 bottom-0 w-[1px] bg-black/[0.03]" />
-      </div>
     </section>
   );
 }
