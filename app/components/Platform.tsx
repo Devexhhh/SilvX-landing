@@ -7,33 +7,33 @@ const modules = [
   {
     title: "Idea generation",
     desc: "Uncover whitespace, evolve ideas toward novelty, and assess patentability with certainty.",
-    gradient: "radial-gradient(circle at 50% 50%, #c45c30 0%, #450a0a 60%, #000 100%)",
+    // Converted to Tailwind arbitrary class (spaces replaced with underscores)
+    gradient: "bg-[radial-gradient(circle_at_50%_50%,#c45c30_0%,#450a0a_60%,#000_100%)]",
     icon: <Lightbulb size={24} strokeWidth={1.5} />,
   },
   {
     title: "Drafting",
     desc: "Draft invention disclosures and full patent applications with precision and structure.",
-    gradient: "radial-gradient(circle at 50% 50%, #1e40af 0%, #1e293b 70%, #0f172a 100%)",
+    gradient: "bg-[radial-gradient(circle_at_50%_50%,#1e40af_0%,#1e293b_70%,#0f172a_100%)]",
     icon: <PenLine size={24} strokeWidth={1.5} />,
   },
   {
     title: "Prosecution",
     desc: "Guide responses, amendments, and litigation-related strategy with evidence-backed reasoning.",
-    gradient: "radial-gradient(circle at 50% 50%, #991b1b 0%, #450a0a 70%, #0a0a0a 100%)",
+    gradient: "bg-[radial-gradient(circle_at_50%_50%,#991b1b_0%,#450a0a_70%,#0a0a0a_100%)]",
     icon: <Gavel size={24} strokeWidth={1.5} />,
   },
   {
     title: "Protection",
     desc: "Monitor products, detect infringement signals, and surface competitive patent insights.",
-    gradient: "radial-gradient(circle at 50% 50%, #1d4ed8 0%, #0f172a 70%, #000 100%)",
+    gradient: "bg-[radial-gradient(circle_at_50%_50%,#1d4ed8_0%,#0f172a_70%,#000_100%)]",
     icon: <ShieldCheck size={24} strokeWidth={1.5} />,
   },
 ];
 
 export default function Platform() {
   return (
-    // Removed top-20. Adjusted to pt-16 and pb-32 to stack perfectly under TrustedBy
-    <section className="relative w-full bg-[#f5f4f1] pt-16 pb-32 flex flex-col items-center">
+    <section className="relative w-full bg-[#f5f4f1] pt-12 flex flex-col items-center">
       <div className="relative z-10 w-full max-w-5xl mx-auto px-6">
         <div className="mb-20">
           <div className="flex items-center gap-2 text-[11px] font-sans font-bold tracking-[0.2em] uppercase text-black/40 mb-6">
@@ -59,8 +59,10 @@ export default function Platform() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {modules.map((m) => (
             <div key={m.title} className="group cursor-pointer">
-              <div className="h-44 rounded-sm mb-6 flex items-center justify-center relative overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-black/10"
-                style={{ background: m.gradient }}>
+              {/* Removed style={{}} and injected the m.gradient class directly */}
+              <div
+                className={`h-44 rounded-sm mb-6 flex items-center justify-center relative overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-black/10 ${m.gradient}`}
+              >
                 <div className="absolute inset-0 bg-white/5 opacity-40 mix-blend-overlay" />
                 <div className="text-white relative z-10 transition-transform duration-500 group-hover:scale-110 drop-shadow-2xl">
                   {m.icon}
