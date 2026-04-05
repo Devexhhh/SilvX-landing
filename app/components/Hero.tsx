@@ -25,89 +25,106 @@ export default function Hero() {
         {/* BASE */}
         <div className="absolute inset-0 bg-[#020617]" />
 
-        {/* ===== MAIN EMERALD LIGHT BEAM ===== */}
+        {/* ===== PRIMARY LIGHT BEAM (Sharper & Cinematic) ===== */}
         <div
-          className="absolute left-1/2 top-[78%] w-[150%] h-[150%] -translate-x-1/2"
+          className="absolute left-1/2 top-[82%] w-[160%] h-[160%] -translate-x-1/2"
           style={{
             background: `
               conic-gradient(
-                from 210deg at 50% 100%,
+                from 212deg at 50% 100%,
                 transparent 0deg,
-                transparent 120deg,
-                rgba(16,185,129,0.9) 138deg,
-                rgba(52,211,153,1) 150deg,
-                rgba(16,185,129,0.9) 162deg,
-                transparent 180deg,
+                transparent 125deg,
+                rgba(16,185,129,0.95) 142deg,
+                rgba(110,231,183,1) 150deg,
+                rgba(16,185,129,0.95) 158deg,
+                transparent 175deg,
                 transparent 360deg
               )
             `,
-            filter: "blur(35px)",
-            transform: "rotate(-18deg)",
+            filter: "blur(28px)",
+            transform: "rotate(-16deg)",
           }}
         />
 
-        {/* ===== SILVER CORE (BRIGHT CENTER HIT) ===== */}
+        {/* ===== ULTRA SHARP CORE HIGHLIGHT ===== */}
         <div
-          className="absolute left-1/2 top-[80%] w-[130%] h-[130%] -translate-x-1/2"
+          className="absolute left-1/2 top-[83%] w-[140%] h-[140%] -translate-x-1/2"
           style={{
             background: `
               conic-gradient(
-                from 210deg at 50% 100%,
-                transparent 135deg,
-                rgba(255,255,255,0.95) 150deg,
-                rgba(226,232,240,1) 154deg,
-                rgba(148,163,184,0.9) 158deg,
-                transparent 172deg
+                from 212deg at 50% 100%,
+                transparent 138deg,
+                rgba(255,255,255,1) 150deg,
+                rgba(226,232,240,1) 153deg,
+                rgba(148,163,184,0.95) 156deg,
+                transparent 168deg
               )
             `,
-            filter: "blur(18px)",
-            transform: "rotate(-18deg)",
+            filter: "blur(10px)",
+            transform: "rotate(-16deg)",
+          }}
+        />
+
+        {/* ===== MICRO LIGHT STREAK (KEY DETAIL) ===== */}
+        <div
+          className="absolute left-1/2 top-[84%] w-[120%] h-[120%] -translate-x-1/2"
+          style={{
+            background: `
+              conic-gradient(
+                from 212deg at 50% 100%,
+                transparent 145deg,
+                rgba(255,255,255,0.9) 150deg,
+                transparent 155deg
+              )
+            `,
+            filter: "blur(4px)",
+            transform: "rotate(-16deg)",
           }}
         />
 
         {/* ===== SECONDARY SILVER REFLECTION ===== */}
         <div
-          className="absolute left-1/2 top-[70%] w-[150%] h-[150%] -translate-x-1/2"
+          className="absolute left-1/2 top-[72%] w-[150%] h-[150%] -translate-x-1/2"
           style={{
             background: `
               conic-gradient(
                 from 250deg at 50% 100%,
                 transparent 0deg,
-                rgba(148,163,184,0.35) 110deg,
-                rgba(203,213,225,0.7) 125deg,
-                rgba(148,163,184,0.35) 140deg,
+                rgba(148,163,184,0.25) 110deg,
+                rgba(226,232,240,0.75) 125deg,
+                rgba(148,163,184,0.25) 140deg,
                 transparent 165deg
               )
             `,
-            filter: "blur(55px)",
-            transform: "rotate(25deg)",
+            filter: "blur(50px)",
+            transform: "rotate(24deg)",
           }}
         />
 
-        {/* ===== SUBTLE GREEN AMBIENT GLOW ===== */}
+        {/* ===== SUBTLE EMERALD AMBIENT ===== */}
         <div
-          className="absolute left-1/2 top-[85%] w-[120%] h-[120%] -translate-x-1/2"
+          className="absolute left-1/2 top-[88%] w-[120%] h-[120%] -translate-x-1/2"
           style={{
             background: `
               radial-gradient(
                 circle at center,
-                rgba(16,185,129,0.25),
-                transparent 70%
+                rgba(16,185,129,0.18),
+                transparent 75%
               )
             `,
-            filter: "blur(60px)",
+            filter: "blur(70px)",
           }}
         />
 
-        {/* ===== DEPTH VIGNETTE (CRITICAL) ===== */}
+        {/* ===== VIGNETTE (FINAL DEPTH CONTROL) ===== */}
         <div
           className="absolute inset-0"
           style={{
             background: `
               radial-gradient(
-                circle at 50% 80%,
+                circle at 50% 82%,
                 transparent 0%,
-                rgba(2,6,23,0.4) 50%,
+                rgba(2,6,23,0.5) 45%,
                 #020617 100%
               )
             `,
